@@ -48,7 +48,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7i-Sm-oAQ">
-                                            <rect key="frame" x="134" y="36" width="72.5" height="28"/>
+                                            <rect key="frame" x="133.5" y="36" width="73" height="28"/>
                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="633" y="569"/>
         </scene>
-        <!--View Controller-->
+        <!--Breaking Bad View Controller-->
         <scene sceneID="Tda-IA-ftP">
             <objects>
-                <viewController id="c8v-Q6-Uco" sceneMemberID="viewController">
+                <viewController id="c8v-Q6-Uco" customClass="BreakingBadViewController" customModule="BreakingBadApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAx-Hm-162">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-yw-qCZ">
                                 <rect key="frame" x="16" y="44" width="288" height="367"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNu-N8-iQK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FNu-N8-iQK">
                                 <rect key="frame" x="16" y="427" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -124,24 +124,39 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="randomActorButton" destination="c8v-Q6-Uco" eventType="touchUpInside" id="tZH-qo-7y5"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JLV-Yh-fqJ">
+                                <rect key="frame" x="136" y="203.5" width="48" height="48"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qWe-ne-vXd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qWe-ne-vXd" firstAttribute="bottom" secondItem="Wmy-tb-r3W" secondAttribute="bottom" multiplier="1.04" id="1TL-MI-cJM"/>
                             <constraint firstItem="gcr-yw-qCZ" firstAttribute="height" secondItem="MAx-Hm-162" secondAttribute="height" multiplier="0.646127" id="1rh-V5-eY7"/>
+                            <constraint firstItem="gcr-yw-qCZ" firstAttribute="width" secondItem="JLV-Yh-fqJ" secondAttribute="width" multiplier="6" id="2GM-A0-s84"/>
+                            <constraint firstItem="gcr-yw-qCZ" firstAttribute="height" secondItem="JLV-Yh-fqJ" secondAttribute="height" multiplier="7.64583" id="362-1e-r35"/>
                             <constraint firstItem="FNu-N8-iQK" firstAttribute="top" secondItem="gcr-yw-qCZ" secondAttribute="bottom" constant="16" id="Gla-Jd-dYp"/>
                             <constraint firstItem="FNu-N8-iQK" firstAttribute="leading" secondItem="qWe-ne-vXd" secondAttribute="leading" constant="16" id="Gvd-M9-gq6"/>
+                            <constraint firstItem="JLV-Yh-fqJ" firstAttribute="centerY" secondItem="gcr-yw-qCZ" secondAttribute="centerY" id="IVf-qi-2g1"/>
                             <constraint firstItem="qWe-ne-vXd" firstAttribute="trailing" secondItem="FNu-N8-iQK" secondAttribute="trailing" constant="16" id="N9M-b1-gBi"/>
                             <constraint firstItem="gcr-yw-qCZ" firstAttribute="leading" secondItem="qWe-ne-vXd" secondAttribute="leading" constant="16" id="YYL-0b-xs4"/>
                             <constraint firstItem="qWe-ne-vXd" firstAttribute="trailing" secondItem="Wmy-tb-r3W" secondAttribute="trailing" constant="16" id="bmM-Rx-PQt"/>
+                            <constraint firstItem="JLV-Yh-fqJ" firstAttribute="centerX" secondItem="gcr-yw-qCZ" secondAttribute="centerX" id="dJ4-DX-Vvi"/>
                             <constraint firstItem="qWe-ne-vXd" firstAttribute="trailing" secondItem="gcr-yw-qCZ" secondAttribute="trailing" constant="16" id="lRN-pa-y50"/>
                             <constraint firstItem="gcr-yw-qCZ" firstAttribute="top" secondItem="qWe-ne-vXd" secondAttribute="top" id="uf1-2t-bDf"/>
                             <constraint firstItem="Wmy-tb-r3W" firstAttribute="leading" secondItem="qWe-ne-vXd" secondAttribute="leading" constant="16" id="whx-IP-RV0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9e0-MH-D9y"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="FNu-N8-iQK" id="DdS-y2-Pbq"/>
+                        <outlet property="photoImageView" destination="gcr-yw-qCZ" id="foy-AJ-Uik"/>
+                        <outlet property="randomActorButton" destination="Wmy-tb-r3W" id="ffe-rS-ljG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKY-1i-Rot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
