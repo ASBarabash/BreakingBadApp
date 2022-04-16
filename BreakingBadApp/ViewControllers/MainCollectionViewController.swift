@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 //Подписываем под протокол CaseIterable, что позволит нам обратившись к типу данных UserAction вызвать геттер allCases
 enum UserAction: String, CaseIterable {
@@ -18,7 +19,9 @@ class MainCollectionViewController: UICollectionViewController {
     
     let userActions = UserAction.allCases
 
-    
+//    override func viewDidLoad() {
+//        <#code#>
+//    }
 
     /*
     // MARK: - Navigation
@@ -59,6 +62,7 @@ class MainCollectionViewController: UICollectionViewController {
         case .showBreakinBad: performSegue(withIdentifier: "showBreakingBad", sender: nil)
         case .showRandomImage: performSegue(withIdentifier: "showRandomImage", sender: nil)
         }
+        
     }
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -95,19 +99,7 @@ class MainCollectionViewController: UICollectionViewController {
 extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 48, height: 100)
-        
     }
 }
 
-// MARK: - Networking
-extension MainCollectionViewController {
-    
-    func fetchBreakingBad() {
-        
-    }
-    
-    func fetchRandomImage() {
-        
-    }
-    
-}
+
