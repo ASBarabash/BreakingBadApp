@@ -14,6 +14,7 @@ class BreakingBadViewController: UIViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var actorBatton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         actorBatton.layer.cornerRadius = 10
@@ -21,7 +22,6 @@ class BreakingBadViewController: UIViewController {
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         downloadData()
-        
     }
     
     @IBAction func randomActorButton() {
