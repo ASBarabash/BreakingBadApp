@@ -109,7 +109,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-yw-qCZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-yw-qCZ">
                                 <rect key="frame" x="16" y="44" width="288" height="367"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FNu-N8-iQK">
@@ -125,7 +125,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="randomActorButton" destination="c8v-Q6-Uco" eventType="touchUpInside" id="tZH-qo-7y5"/>
+                                    <action selector="randomActorButton" destination="c8v-Q6-Uco" eventType="touchUpInside" id="yLE-ry-8Os"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JLV-Yh-fqJ">
@@ -133,7 +133,7 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qWe-ne-vXd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qWe-ne-vXd" firstAttribute="bottom" secondItem="Wmy-tb-r3W" secondAttribute="bottom" multiplier="1.04" id="1TL-MI-cJM"/>
                             <constraint firstItem="gcr-yw-qCZ" firstAttribute="height" secondItem="MAx-Hm-162" secondAttribute="height" multiplier="0.646127" id="1rh-V5-eY7"/>
@@ -155,7 +155,6 @@
                     <connections>
                         <outlet property="infoLabel" destination="FNu-N8-iQK" id="DdS-y2-Pbq"/>
                         <outlet property="photoImageView" destination="gcr-yw-qCZ" id="foy-AJ-Uik"/>
-                        <outlet property="randomActorButton" destination="Wmy-tb-r3W" id="ffe-rS-ljG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKY-1i-Rot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

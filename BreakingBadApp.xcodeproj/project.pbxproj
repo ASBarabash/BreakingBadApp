@@ -12,12 +12,12 @@
 		415E7141280AC93C00840E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415E713F280AC93C00840E3F /* Main.storyboard */; };
 		415E7143280AC93C00840E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415E7142280AC93C00840E3F /* Assets.xcassets */; };
 		415E7146280AC93C00840E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415E7144280AC93C00840E3F /* LaunchScreen.storyboard */; };
-		415E714F280AC98E00840E3F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 415E714E280AC98E00840E3F /* Alamofire */; };
 		415E7155280ACDBE00840E3F /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E7154280ACDBE00840E3F /* MainCollectionViewController.swift */; };
 		415E715B280AD55100840E3F /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E715A280AD55100840E3F /* UserActionCell.swift */; };
 		415E715D280AE6ED00840E3F /* BreakingBadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E715C280AE6ED00840E3F /* BreakingBadViewController.swift */; };
 		415E7161280AFB8C00840E3F /* BreakingBadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E7160280AFB8C00840E3F /* BreakingBadModel.swift */; };
 		415E7163280B01BA00840E3F /* NetworManagerBreakingBad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415E7162280B01BA00840E3F /* NetworManagerBreakingBad.swift */; };
+		415E7169280C3F5200840E3F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 415E7168280C3F5200840E3F /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				415E714F280AC98E00840E3F /* Alamofire in Frameworks */,
+				415E7169280C3F5200840E3F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +146,7 @@
 			);
 			name = BreakingBadApp;
 			packageProductDependencies = (
-				415E714E280AC98E00840E3F /* Alamofire */,
+				415E7168280C3F5200840E3F /* Alamofire */,
 			);
 			productName = BreakingBadApp;
 			productReference = 415E7136280AC93C00840E3F /* BreakingBadApp.app */;
@@ -178,6 +178,8 @@
 			mainGroup = 415E712D280AC93C00840E3F;
 			packageReferences = (
 				415E714D280AC98E00840E3F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				415E7164280C3F0500840E3F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				415E7167280C3F5200840E3F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 415E7137280AC93C00840E3F /* Products */;
 			projectDirPath = "";
@@ -442,10 +444,26 @@
 				minimumVersion = 5.5.0;
 			};
 		};
+		415E7164280C3F0500840E3F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+		415E7167280C3F5200840E3F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		415E714E280AC98E00840E3F /* Alamofire */ = {
+		415E7168280C3F5200840E3F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 415E714D280AC98E00840E3F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;

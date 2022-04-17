@@ -17,7 +17,7 @@ class BreakingBadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        downloadData()
         
         
 
@@ -41,10 +41,13 @@ class BreakingBadViewController: UIViewController {
 
 }
 extension BreakingBadViewController {
-    @objc private func downloadData() {
+    private func downloadData() {
         NetworkManagerBreakingBad.shared.fetchBreakingBad { result in
             switch result {
             case .success(let value):
+                NetworkManagerBreakingBad.shared.fetchImageWithAF(from: value.first?.img ?? "") { data in
+                    self.photoImageView.image = UIImage(data: data)
+                }
                 self.infoLabel.text = """
 Имя: \(value.first?.name ?? "")
 Прозвище: \(value.first?.nickname ?? "")
