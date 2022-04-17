@@ -37,15 +37,15 @@ class NetworkManagerBreakingBad {
             }
     }
     
-        func fetchImageWithAF(from url: String, completion: @escaping (Data) -> Void) {
-            AF.request(url)
-                .validate()
-                .responseData { responseData in
-                    guard let data = responseData.data else {
-                        print(responseData.error?.localizedDescription ?? "No errors")
-                        return
-                    }
-                    completion(data)
+    func fetchImageWithAF(from url: String, completion: @escaping (Data) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseData { responseData in
+                guard let data = responseData.data else {
+                    print(responseData.error?.localizedDescription ?? "No errors")
+                    return
                 }
-        }
+                completion(data)
+            }
+    }
 }

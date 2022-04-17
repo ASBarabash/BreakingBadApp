@@ -9,37 +9,26 @@ import UIKit
 
 class BreakingBadViewController: UIViewController {
     
-    
     @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var infoLabel: UILabel!
-    
-    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var actorBatton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        actorBatton.layer.cornerRadius = 10
+        photoImageView.layer.cornerRadius = 10
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         downloadData()
         
-        
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func randomActorButton() {
         downloadData()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
 extension BreakingBadViewController {
     private func downloadData() {
         NetworkManagerBreakingBad.shared.fetchBreakingBad { result in
@@ -47,19 +36,18 @@ extension BreakingBadViewController {
             case .success(let value):
                 NetworkManagerBreakingBad.shared.fetchImageWithAF(from: value.first?.img ?? "") { data in
                     self.photoImageView.image = UIImage(data: data)
+                    self.activityIndicator.stopAnimating()
                 }
                 self.infoLabel.text = """
-Имя: \(value.first?.name ?? "")
-Прозвище: \(value.first?.nickname ?? "")
-Род занятий: \(value.first?.occupation[0].description ?? "")
-Актер: \(value.first?.portrayed ?? "")
-"""
-                
+                Имя: \(value.first?.name ?? "")
+                Прозвище: \(value.first?.nickname ?? "")
+                Род занятий: \(value.first?.occupation[0].description ?? "")
+                Актер: \(value.first?.portrayed ?? "")
+                """
             case .failure(let error):
                 print(error)
             }
         }
     }
-    
     
 }
